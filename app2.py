@@ -56,7 +56,7 @@ if uploaded_file is not None:
                     zipf.writestr(filename, f.read())
 
     # Display a download button for the ZIP archive
-    st.download_button(label="Téléchargement des fichiers GPX", data=zip_buffer.getvalue(), file_name="gpx_files.zip")
+    st.download_button(label="Téléchargement des fichiers GPX", data=zip_buffer.getvalue(), file_name="decoupage_mothy.zip")
 
     # Display a message to indicate that the files have been created
     st.success("Découpage effectué avec succès, vous pouvez télécharger l'ensemble des fichiers")
