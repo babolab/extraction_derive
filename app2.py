@@ -5,13 +5,17 @@ import io
 import zipfile
 
 # Set the language to French
-st.set_page_config(page_title="Découpe horaire de fichiers Mothy", layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(page_title="Découpe horaire de fichiers Mothy",
+                   layout="wide",
+                   initial_sidebar_state="expanded",
+                   page_icon=":ocean:")
 
 # Add a title to the app
 st.title("Découpe horaire de fichiers Mothy")
 
 # Add a logo to the app
 st.image("logo.png", width=200)
+"Permet de séparer le fichier mothy en un fichier par heure, pour le projeter ensuite dans un SIG ne gérant pas la temporalité des dérives"
 
 # Add a file uploader widget to allow the user to upload the GPX file
 uploaded_file = st.file_uploader("Insérez le fichier gpx créé par Mothy pour le découper heure par heure", type="gpx")
