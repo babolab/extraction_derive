@@ -14,7 +14,7 @@ st.title("Découpe horaire de fichiers Mothy")
 st.image("logo.png", width=200)
 
 # Add a file uploader widget to allow the user to upload the GPX file
-uploaded_file = st.file_uploader("Insérez le fichier gpx créé par Mothy pour le découper heure par heure", type="gpx")
+uploaded_file = st.file_uploader("Insérez le fichier gpx crée par Mothy pour le découper heure par heure", type="gpx")
 
 if uploaded_file is not None:
     # Load the GPX file
@@ -59,12 +59,4 @@ if uploaded_file is not None:
     st.download_button(label="Téléchargement de tous les fichiers GPX en .zip", data=zip_buffer.getvalue(), file_name="decoupage_mothy.zip")
 
     # Display a message to indicate that the files have been created
-    st.success("Découpage effectué avec succès, zip disponible. N'oubliez pas de dézipper pour faire glisser dans un SIG. Pour télécharger des fichiers individuellement, choisissez plus bas.")
-
-    # Display download buttons for the individual files
-    for date_str, time_dict in waypoints_by_date.items():
-        for time_str, waypoints in time_dict.items():
-            filename = f'{date_str}_{time_str}h.gpx'
-            with open(filename, 'rb') as f:
-                data = f.read()
-            st.download_button(label=f"Mothy {filename}", data=data, file_name=filename)
+    st.success("Découpage effectué avec succès, vous pouvez télécharger l'ensemble des fichiers. N'oubliez pas de dézipper pour faire glisser dans un SIG.")
