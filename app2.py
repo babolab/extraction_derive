@@ -67,4 +67,4 @@ if uploaded_file is not None:
             filename = f'{date_str}_{time_str}h.gpx'
             with open(filename, 'rb') as f:
                 data = f.read()
-            st.download_button(label=f"Mothy {filename}", data=data, file_name=filename)
+            st.download_button(label=f"Fichier horaire (UTC) {filename}", data=data, file_name=filename)
