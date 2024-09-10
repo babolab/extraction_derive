@@ -15,10 +15,10 @@ st.title("Découpe horaire de fichiers Mothy")
 
 # Add a logo to the app
 st.image("logo.png", width=200)
-"Permet de séparer le fichier mothy en un fichier par heure, pour le projeter ensuite dans un SIG ne gérant pas la temporalité des dérives"
+"Permet de séparer le fichier mothy en un fichier par heure, pour le projeter ensuite dans un SIG ne gérant pas la temporalité des dérives."
 
 # Add a file uploader widget to allow the user to upload the GPX file
-uploaded_file = st.file_uploader("Insérez le fichier gpx créé par Mothy pour le découper heure par heure", type="gpx")
+uploaded_file = st.file_uploader("Insérez le fichier gpx créé par Mothy pour le découper heure par heure.", type="gpx")
 
 if uploaded_file is not None:
     # Load the GPX file
